@@ -1,7 +1,7 @@
-const routes = require('express').Router();
+const express = require('express')
 
-routes.get('/', (req, res) =>  {
-    res.send('Blessing');
-})
+const router = express.Router();
 
-module.exports = routes;
+router.use('/contacts', require ('./contact'))
+
+module.exports = router;
